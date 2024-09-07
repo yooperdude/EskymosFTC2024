@@ -1,3 +1,7 @@
+## Team 13598 and 15357
+
+This is the main repositoru for 13598 and 15357# FTC SDK (2024-2025)
+
 ## NOTICE
 
 This repository contains the public FTC SDK for the INTO THE DEEP (2024-2025) competition season.
