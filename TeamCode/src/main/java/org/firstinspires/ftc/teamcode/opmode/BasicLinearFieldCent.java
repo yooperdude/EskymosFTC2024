@@ -81,16 +81,16 @@ public class BasicLinearFieldCent extends LinearOpMode {
          * These names are critical, label the front of the robot as FRONT. This will be
          * important later!
          */
-        leftFrontDrive  = hardwareMap.get(DcMotor.class, "motorFrontLeft");
-        leftBackDrive  = hardwareMap.get(DcMotor.class, "motorBackLeft");
-        rightFrontDrive = hardwareMap.get(DcMotor.class, "motorFrontRight");
-        rightBackDrive = hardwareMap.get(DcMotor.class, "motorBackRight");
+        leftFrontDrive  = hardwareMap.get(DcMotor.class, "leftFrontDrive");
+        leftBackDrive  = hardwareMap.get(DcMotor.class, "leftBackDrive");
+        rightFrontDrive = hardwareMap.get(DcMotor.class, "rightFrontDrive");
+        rightBackDrive = hardwareMap.get(DcMotor.class, "rightBackDrive");
 
         /*
         * This initializes the servoTest servo. You would initialize other servos using the same method.
          */
 
-        servoTest = hardwareMap.get(Servo.class, "servoTest");
+        servoTest = hardwareMap.get(Servo.class, "intakeSlideServo");
         //Start the composeTelemtry function.
         //composeTelemetry();
 
@@ -121,7 +121,7 @@ public class BasicLinearFieldCent extends LinearOpMode {
         //Adjust the orientation of the IMU to match our configuration.
         IMU.Parameters parameters = new IMU.Parameters(new RevHubOrientationOnRobot(
                 RevHubOrientationOnRobot.LogoFacingDirection.LEFT,
-                RevHubOrientationOnRobot.UsbFacingDirection.UP));
+                RevHubOrientationOnRobot.UsbFacingDirection.DOWN));
         //Without this the REV hub orientation is assumed to be Logo Up and USB Forward.
         imu.initialize(parameters);
 
